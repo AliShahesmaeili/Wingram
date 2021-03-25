@@ -18,7 +18,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="360">
+        <Grid HorizontalAlignment="Center" UseLayoutRounding="True" SnapsToDevicePixels="True" VerticalAlignment="Center" Width="360">
             <Grid.Effect>
                 <DropShadowEffect Direction="270" BlurRadius="100" Color="#FFE9EBEB" ShadowDepth="20"/>
             </Grid.Effect>
