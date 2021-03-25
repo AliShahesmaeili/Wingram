@@ -41,13 +41,16 @@ namespace Wingram.Classes.ViewModels
                 builder.RegisterType<InstagramService>().As<IInstagramService>().SingleInstance();
                 builder.RegisterType<InstaBaseViewModel>().SingleInstance();
                 builder.RegisterType<LoginViewModel>().SingleInstance();
+                builder.RegisterType<PopupMessageViewModel>().SingleInstance();
 
+                
                 return builder.Build();
             });
         }
 
 
         public LoginViewModel LoginViewModel => InstaContainer.Current.Resolve<LoginViewModel>();
+        public PopupMessageViewModel PopupMessageViewModel => InstaContainer.Current.Resolve<PopupMessageViewModel>();
 
     }
 }

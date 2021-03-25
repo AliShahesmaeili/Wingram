@@ -18,7 +18,7 @@ namespace Wingram.Classes.ViewModels
             LoginCommand = new RelayCommand(LoginAsync);
         }
 
-        
+
         public ICommand LoginCommand
         {
             get => loginCommand;
@@ -36,8 +36,17 @@ namespace Wingram.Classes.ViewModels
         }
         public async void LoginAsync()
         {
+
             InstagramService.InstagramApi().SetUser(Username, Password);
             var result = await InstagramService.InstagramApi().LoginAsync();
+            if (result.Succeeded)
+            {
+                // await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle);
+            }
+            else
+            {
+                await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle, result.OtherValue.Buttons);
+            }
         }
     }
 }
