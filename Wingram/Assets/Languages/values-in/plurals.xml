@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="other">%1$s Kontak Anda ada di Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="other">%1$s Teman Facebook Anda Berada di Instagram</item>
+    </plurals>
+</resources>

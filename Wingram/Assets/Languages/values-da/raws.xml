@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <raw name="ads_countries_config">r/beo.json</raw>
+    <raw name="currency_format_config">r/cn7.json</raw>
+    <raw name="date_format_config">r/b24.json</raw>
+    <raw name="localizable">r/b-w.json</raw>
+    <raw name="number_format_config">r/8k.json</raw>
+</resources>

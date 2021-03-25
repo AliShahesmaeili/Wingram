@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="other">%1$s daripada Kenalan Anda di Instagram.</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="other">%1$s daripada Rakan Facebook Anda di Instagram.</item>
+    </plurals>
+</resources>

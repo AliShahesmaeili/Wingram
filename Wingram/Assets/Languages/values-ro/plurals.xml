@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">Unul dintre contactele tale este pe Instagram</item>
+        <item quantity="other">%1$s dintre contactele tale sunt pe Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">Unul dintre prietenii tăi Facebook este pe Instagram</item>
+        <item quantity="other">%1$s dintre prietenii tăi Facebook sunt pe Instagram</item>
+    </plurals>
+</resources>

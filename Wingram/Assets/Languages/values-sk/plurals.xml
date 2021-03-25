@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">1 z vašich kontaktov je na Instagrame</item>
+        <item quantity="other">%1$s z vašich kontaktov je na Instagrame</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">1 z vašich priateľov na Facebooku je aj na Instagrame</item>
+        <item quantity="other">%1$s z vašich priateľov na Facebooku je aj na Instagrame</item>
+    </plurals>
+</resources>

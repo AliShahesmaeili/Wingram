@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="other">你有%1$s位聯絡人正在使用 Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="other">你有%1$s位 Facebook 朋友正在使用 Instagram</item>
+    </plurals>
+</resources>

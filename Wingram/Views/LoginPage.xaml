@@ -34,7 +34,7 @@
                 </Border.Background>
             </Border>
 
-            <Grid>
+            <Grid IsEnabled="False">
                 <Grid Margin="16">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>

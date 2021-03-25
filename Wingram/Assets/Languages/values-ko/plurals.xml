@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="other">연락처에 있는 사람 중 %1$s명이 Instagram을 사용 중입니다</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="other">Facebook 친구 중 %1$s명이 Instagram을 사용 중입니다</item>
+    </plurals>
+</resources>

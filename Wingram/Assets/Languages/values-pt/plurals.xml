@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">1 de seus contatos está no Instagram</item>
+        <item quantity="other">%1$s de seus contatos estão no Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">1 de seus amigos do Facebook está no Instagram</item>
+        <item quantity="other">%1$s de seus amigos do Facebook estão no Instagram</item>
+    </plurals>
+</resources>

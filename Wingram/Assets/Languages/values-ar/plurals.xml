@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">شخص واحد من جهات اتصالك يستخدم Instagram</item>
+        <item quantity="other">%1$s من جهات اتصالك يستخدمون Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">شخص واحد من أصدقائك على فيسبوك يستخدم Instagram</item>
+        <item quantity="other">%1$s من أصدقائك على فيسوك يستخدمون Instagram</item>
+    </plurals>
+</resources>

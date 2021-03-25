@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__address_level_1">ویلایەت</string>
+    <string name="__external__address_line_1">ناونیشان</string>
+    <string name="__external__browser_close_button_description">داخستنی وێبگەڕەکە</string>
+    <string name="__external__browser_lite_permission_allow">ڕێگە بدە</string>
+    <string name="__external__browser_lite_permission_block">سڕكردن</string>
+    <string name="__external__browser_ssl_error_positive_button_text">گه‌ڕانه‌وه‌</string>
+    <string name="__external__card_cvv_hint_1">کۆدی پاراستن</string>
+    <string name="__external__card_pan_hint">ژماره‌ی كارت</string>
+    <string name="__external__demask_card_ok_title">جەختکردنەوە</string>
+    <string name="__external__dialog_okay">باشه</string>
+    <string name="__external__email">پەیامی ئەلیکترۆنی</string>
+    <string name="__external__family_name">پاشناو</string>
+    <string name="__external__feed_browser_more_options">هه‌ڵبژارده‌ی زیاتر</string>
+    <string name="__external__given_name">ناو</string>
+    <string name="__external__name">ناو</string>
+</resources>

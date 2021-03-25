@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__browser_lite_permission_block">Rambidza</string>
+    <string name="__external__card_cvv_hint_1">Kodhi yechengetedzo</string>
+    <string name="__external__demask_card_ok_title">Simbisa</string>
+    <string name="__external__email">Kero yetsamba</string>
+    <string name="__external__family_name">Zita Remhuri</string>
+    <string name="__external__feed_browser_more_options">Zvimwe</string>
+    <string name="__external__given_name">Zita Rekutanga</string>
+</resources>

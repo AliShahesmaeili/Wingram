@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="other">%1$s คนในรายชื่อผู้ติดต่อของคุณใช้งาน Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="other">เพื่อน %1$s คนของคุณบน Facebook ใช้งาน Instagram</item>
+    </plurals>
+</resources>

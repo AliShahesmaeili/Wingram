@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="other">Ваші контакти в Instagram: %1$s</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="other">В Instagram є ваші друзі з Facebook (%1$s)</item>
+    </plurals>
+</resources>

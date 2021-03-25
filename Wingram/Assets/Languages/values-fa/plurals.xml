@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">۱ نفر از مخاطبین شما در Instagram است</item>
+        <item quantity="other">%1$s از مخاطبین شما در Instagram است</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">۱ نفر از دوستان فیس‌بوکتان در Instagram است</item>
+        <item quantity="other">%1$s از دوستان فیس‌بوکی شما در Instagram است</item>
+    </plurals>
+</resources>

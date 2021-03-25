@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">%1$s ваш контакт користи Instagram</item>
+        <item quantity="few">%1$s ваша контакта користе Instagram</item>
+        <item quantity="other">%1$s ваших контаката користи Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">%1$s ваш пријатељ са Фејсбука користи Instagram</item>
+        <item quantity="few">%1$s ваша пријатеља са Фејсбука користе Instagram</item>
+        <item quantity="other">%1$s ваших пријатеља са Фејсбука користи Instagram</item>
+    </plurals>
+</resources>

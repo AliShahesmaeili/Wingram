@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">אחד מאנשי הקשר שלך נמצא באינסטגרם</item>
+        <item quantity="other">%1$s מאנשי הקשר שלך נמצאים באינסטגרם</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">אחד מהחברים שלך בפייסבוק נמצא באינסטגרם</item>
+        <item quantity="other">%1$s מהחברים שלך בפייסבוק נמצאים באינסטגרם</item>
+    </plurals>
+</resources>

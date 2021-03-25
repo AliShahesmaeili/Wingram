@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">1 van je contacten gebruikt Instagram</item>
+        <item quantity="other">%1$s van je contacten gebruikt/gebruiken Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">1 van je Facebook-vrienden gebruikt Instagram</item>
+        <item quantity="other">%1$s van je Facebook-vrienden gebruikt/gebruiken Instagram</item>
+    </plurals>
+</resources>

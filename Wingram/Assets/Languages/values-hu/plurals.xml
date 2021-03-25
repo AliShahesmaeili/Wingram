@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">1 ember jelen van az Instagramon a névjegyzékedből</item>
+        <item quantity="other">%1$s kapcsolatod jelen van az Instagramon.</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">1 Facebook-ismerősöd jelen van az Instagramon</item>
+        <item quantity="other">%1$s Facebook-ismerősöd jelen van az Instagramon</item>
+    </plurals>
+</resources>

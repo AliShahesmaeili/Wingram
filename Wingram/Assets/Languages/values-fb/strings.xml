@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__address_level_1">[State#4c21c08d62b3eb0f64f9709c71df74f0:1]</string>
+    <string name="__external__address_level_2">[City#8b9615cca2d5d404a16cccf0cd7eb395:1]</string>
+    <string name="__external__address_line_1">[Address#95bd2ff264663fd6cab85cc9abdd2a15:1]</string>
+    <string name="__external__address_line_2">[Apt/Ste (Optional)#ce3a7aca788e83fcc71666bae16aebfd:1]</string>
+    <string name="__external__browser_close_button_description">[Close browser#02d659405af35835d13da39af1d2e00c:1]</string>
+    <string name="__external__browser_lite_camera_permission_prompt">[%1$s wants to use your device\'s camera.#5733fe7d9676f4a4e086bfbc28bb94c1:1]</string>
+    <string name="__external__browser_lite_location_permission_prompt">[%1$s wants to use your device\'s location.#5af8e7889a1847aaf3c7b40f30a94644:1]</string>
+    <string name="__external__browser_lite_permission_allow">[Allow#6976bf53995007f9771459f5116bb519:1]</string>
+    <string name="__external__browser_lite_permission_block">[Block#4af4232d96494122078812a5ed7cca91:1]</string>
+    <string name="__external__browser_ssl_error_message">[There are problems with the security certificate for this site#06b5d9a730f59fdc720d3ddfdee37593:1]</string>
+    <string name="__external__browser_ssl_error_positive_button_text">[Go Back#6e19608c34dd9b71c8a86f0edc46eae6:1]</string>
+    <string name="__external__browser_ssl_error_title">[Security error#51b43d963b36f8621e8528f808ae7cb8:1]</string>
+    <string name="__external__card_cvv_hint_1">[Security code#f03ed74fe4322103ea4e457b0cccc6e6:1]</string>
+    <string name="__external__card_pan_hint">[Card Number#cabca08bb553afdc8c645204935a550b:1]</string>
+    <string name="__external__demask_card_description">[Enter the 3- or 4-digit security code on your %1$s • %2$s to autofill this form.#1b08eabeb1677291e6d257503397d133:1]</string>
+    <string name="__external__demask_card_extra_security_description">[As an extra security check please enter details for your card ending with %1$s.#ee4f941c2b6a61649a1e02c6a81aa7e7:1]</string>
+    <string name="__external__demask_card_extra_security_pan_description">[As an extra security check, please enter the full card number for the card ending in %1$s.#a204b7279a91bd1124c52dbc58e04fc1:1]</string>
+    <string name="__external__demask_card_extra_security_pan_title">[Add the Full Card Number for %1$s • %2$s.#c3e4d74e6ee890a0b2356c263777d894:1]</string>
+    <string name="__external__demask_card_extra_security_title">[Confirm Card Details#3b42e97cd49d447967cd5e999a730a77:1]</string>
+    <string name="__external__demask_card_ok_title">[Confirm#7398c3daba388f69fd2cf3e87650eac9:1]</string>
+    <string name="__external__demask_card_title">[Confirm the Security Code for %1$s • %2$s#aa544b325cc1cb0b77ab1acdffcd6735:1]</string>
+    <string name="__external__dialog_okay">[OK#df56c4050d0b81954e06beb755209492:1]</string>
+    <string name="__external__email">[Email#234c0600815d9bd521aa25eba4e028e5:1]</string>
+    <string name="__external__family_name">[Last Name#b1047b22bcd3842ec48ee9e635fd43ee:1]</string>
+    <string name="__external__feed_browser_cannot_load_page">[Page can\'t be loaded#217a554ad8ab8e933e664f0f85dda94e:1]</string>
+    <string name="__external__feed_browser_menu_item_open_with">[Open with …#786ee43ece3abbcc201723055a0cab5d:1]</string>
+    <string name="__external__feed_browser_menu_item_open_with_specific_app">[Open in %1$s#0e342b5db6b4204ecf2a711a5d749bd7:1]</string>
+    <string name="__external__feed_browser_more_options">[More options#0b31ab7e5c47ca2cc253943f0e9fef81:1]</string>
+    <string name="__external__given_name">[First Name#1bedb0b9a2d86d4f30b1e17f6900456c:1]</string>
+    <string name="__external__name">[Name#a4ceb495a93db9cf0cec380611182182:1]</string>
+    <string name="__external__postal_code">[Zipcode#b7fe0d8621c4e936c51830d2cfb8d78e:1]</string>
+    <string name="__external__tel">[Telephone#a7d389b2a5963e46fa8858396ffe48d7:1]</string>
+</resources>

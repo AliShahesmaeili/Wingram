@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__address_level_1">ျပည္နယ္</string>
+    <string name="__external__address_level_2">ၿမိဳ့</string>
+    <string name="__external__address_line_1">ေနရပ္လိပ္စာ</string>
+    <string name="__external__address_line_2">တိုက္ခန္း/အခန္း အမွတ္</string>
+    <string name="__external__browser_close_button_description">ဘေရာက္ဇာပိတ္ပါ</string>
+    <string name="__external__browser_lite_camera_permission_prompt">%1$s သည္ သင့္ကိရိယာ၏ ကင္မရာကို လိုခ်င္ပါသည္။</string>
+    <string name="__external__browser_lite_location_permission_prompt">%1$s သည္ သင့္ကိရိယာ၏ တည္ေနရာကို အသုံးျပဳလိုပါသည္။</string>
+    <string name="__external__browser_lite_permission_allow">ခြင့္ျပဳရန္</string>
+    <string name="__external__browser_lite_permission_block">ပိတ္ပင္မယ္</string>
+    <string name="__external__browser_ssl_error_message">ဤဆိုဒ္အတြက္ လုံျခဳံေရး လက္မွတ္ႏွင့္ပတ္သက္ေသာ ျပႆနာမ်ား ျဖစ္သည္။</string>
+    <string name="__external__browser_ssl_error_positive_button_text">ျပန္သြားရန္</string>
+    <string name="__external__browser_ssl_error_title">လုံျခဳံမွု အမွား</string>
+    <string name="__external__card_cvv_hint_1">လုံျခဳံေရးကုဒ္</string>
+    <string name="__external__card_pan_hint">ကတ္နံပါတ္</string>
+    <string name="__external__demask_card_description">ဒီေဖာင္မွာ အလိုအေလ်ာက္ ျဖည့္သြင္းဖို့အတြက္ သင့္ရဲ့ %1$s • %2$s ေပၚက ဂဏန္း ၃ လုံး ဒါမွမဟုတ္ ဂဏန္း ၄ လုံးရွိတဲ့ လုံျခဳံေရးကုဒ္ကို ထည့္သြင္းပါ။</string>
+    <string name="__external__demask_card_extra_security_description">%1$s နဲ႔ အဆုံးသတ္တဲ့ သင့္ကတ္အတြက္ အေသးစိတ္ အခ်က္အလက္ေတြကို ျဖည့္စြက္ လုံျခဳံေရးစစ္ေဆးမွု တစ္ခုအေနနဲ႔ ေက်းဇူးျပဳၿပီး ျဖည့္သြင္းေပးပါ။</string>
+    <string name="__external__demask_card_extra_security_pan_description">%1$s နဲ႔ အဆုံးသတ္တဲ့ သင့္ကတ္အတြက္ ကတ္နံပါတ္ အျပည့္အစုံကို ျဖည့္စြက္ လုံျခဳံေရးစစ္ေဆးမွု တစ္ခုအေနနဲ႔ ေက်းဇူးျပဳၿပီး ျဖည့္သြင္းေပးပါ။</string>
+    <string name="__external__demask_card_extra_security_pan_title">%1$s • %2$s အတြက္ ကတ္နံပါတ္ အျပည့္အစုံ ထည့္သြင္းပါ။</string>
+    <string name="__external__demask_card_extra_security_title">ကတ္ရဲ့ အေသးစိတ္အခ်က္အလက္ေတြကို အတည္ျပဳပါ</string>
+    <string name="__external__demask_card_ok_title">အတည္ျပဳမယ္</string>
+    <string name="__external__demask_card_title">%1$s • %2$s အတြက္ လုံျခဳံေရးကုဒ္ကို အတည္ျပဳပါ</string>
+    <string name="__external__dialog_okay">အိုေက</string>
+    <string name="__external__email">အီးေမး</string>
+    <string name="__external__family_name">မ်ိဳးရိုးအမည္</string>
+    <string name="__external__feed_browser_cannot_load_page">စာမ်က္ႏွာကို မသြားနိုင္ပါ။</string>
+    <string name="__external__feed_browser_menu_item_open_with">ႏွင့္ ဖြင့္ရန္</string>
+    <string name="__external__feed_browser_menu_item_open_with_specific_app">%1$sတြင္ ဖြင့္ပါ။</string>
+    <string name="__external__feed_browser_more_options">ေနာက္ထပ္ ေရြးစရာမ်ား</string>
+    <string name="__external__given_name">အမည္</string>
+    <string name="__external__name">အမည္</string>
+    <string name="__external__postal_code">စာပို့သေကၤတ</string>
+    <string name="__external__tel">တယ္လီဖုန္း</string>
+</resources>

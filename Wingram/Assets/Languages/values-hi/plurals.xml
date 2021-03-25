@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">आपका कोई 1 संपर्क Instagram पर है</item>
+        <item quantity="other">आपके %1$s संपर्क Instagram पर हैं</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">आपका कोई 1 Facebook मित्र Instagram पर है</item>
+        <item quantity="other">आपके %1$s Facebook मित्र Instagram पर हैं</item>
+    </plurals>
+</resources>

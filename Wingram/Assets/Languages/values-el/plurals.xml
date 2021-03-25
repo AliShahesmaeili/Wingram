@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="x_contacts_on_instagram">
+        <item quantity="one">1 από τις επαφές σας είναι στο Instagram</item>
+        <item quantity="other">%1$s από τις επαφές σας είναι στο Instagram</item>
+    </plurals>
+    <plurals name="x_fb_friends_on_instagram">
+        <item quantity="one">1 από τους φίλους σας στο Facebook είναι στο Instagram</item>
+        <item quantity="other">%1$s από τους φίλους σας στο Facebook είναι στο Instagram</item>
+    </plurals>
+</resources>
