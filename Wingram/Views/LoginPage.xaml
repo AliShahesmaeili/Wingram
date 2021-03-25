@@ -70,6 +70,7 @@
                         <Button.Effect>
                             <DropShadowEffect Direction="270" Color="#FFCFE2FD" ShadowDepth="20" BlurRadius="100"/>
                         </Button.Effect>
+                      
                         <TextBlock Text="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
                     </Button>
                 </Grid>

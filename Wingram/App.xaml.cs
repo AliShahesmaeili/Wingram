@@ -1,10 +1,12 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using Wingram.Classes.ViewModels;
 
 namespace Wingram
@@ -21,9 +23,12 @@ namespace Wingram
             Locator.LoadSessionsAsync();
         }
 
-        protected async override void OnStartup(StartupEventArgs e)
+        protected override void OnStartup(StartupEventArgs e)
         {
-           // await Locator.LoadSessionsAsync();
+            var paletteHelper = new PaletteHelper();
+            var theme = paletteHelper.GetTheme();
+            theme.SetPrimaryColor(Color.FromRgb(101, 162, 248));
+            paletteHelper.SetTheme(theme);
         }
     }
 }

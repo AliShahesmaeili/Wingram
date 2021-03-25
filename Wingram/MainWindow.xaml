@@ -15,13 +15,7 @@
                 <materialDesign:TransitionEffect Kind="FadeIn" Duration="0:0:0.3" />
                 <materialDesign:TransitionEffect Kind="ExpandIn" Duration="0:0:0.3" />
             </materialDesign:TransitioningContent.OpeningEffects>
-            <materialDesign:Card MaxWidth="340" MaxHeight="500" VerticalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="6" Padding="24" Margin="32">
-                <materialDesign:Card.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#F4F6F7"/>
-                        <GradientStop Color="#EEEFF0" Offset="1"/>
-                    </LinearGradientBrush>
-                </materialDesign:Card.Background>
+            <materialDesign:Card MaxWidth="340" MaxHeight="500" VerticalAlignment="Center" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="6" Padding="20" Margin="32">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
@@ -29,12 +23,12 @@
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="{Binding Title}" Foreground="#CED4E6" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left"/>
-                    <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Foreground="#CED4E6" Grid.Row="1" Margin="0,10,0,0" FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock Text="{Binding Title}" Foreground="#222E54" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Foreground="#7A88B6" Grid.Row="1" Margin="0,10,0,0" FontWeight="Bold" HorizontalAlignment="Left"/>
                     <CheckBox Grid.Row="2" Visibility="Collapsed"/>
                     <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Right" Margin="0,16,0,0">
-                        <Button Content="{Binding SecondaryButtonText}" Visibility="{Binding SecondaryButtonVisibility, FallbackValue='Collapsed'}" Foreground="#CED4E6" Style="{StaticResource MaterialDesignFlatButton}" Margin="8,0" Command="{Binding SecondaryCommand}"/>
-                        <Button Content="{Binding PrimaryButtonText}" Foreground="#CED4E6" Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding PrimaryCommand}"/>
+                        <Button Content="{Binding SecondaryButtonText}" Background="#F2F3F4" Foreground="#7A88B6" Visibility="{Binding SecondaryButtonVisibility, FallbackValue='Collapsed'}" Style="{StaticResource MaterialDesignFlatButton}" Margin="8,0" Command="{Binding SecondaryCommand}"/>
+                        <Button Content="{Binding PrimaryButtonText}" Background="#4894FF" Foreground="White" Style="{StaticResource MaterialDesignFlatButton}" Command="{Binding PrimaryCommand}"/>
                     </StackPanel>
                 </Grid>
             </materialDesign:Card>
