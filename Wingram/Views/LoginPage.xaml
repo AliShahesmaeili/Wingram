@@ -47,11 +47,11 @@
 
                     <TextBlock Text="Wingram"  FontSize="30" Margin="8" FontFamily="Lobster Two" HorizontalAlignment="Center" Foreground="#FF686868"/>
                     <Border CornerRadius="8" Grid.Row="1" Margin="8,16,8,8" BorderThickness="1" BorderBrush="#FFD7E4D2" Background="#FFE5F0E1">
-                        <TextBox Height="40" Text="{Binding Username, Mode=TwoWay}" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="Username"/>
+                        <TextBox Height="40" materialDesign:TextFieldAssist.DecorationVisibility="Collapsed" Text="{Binding Username, Mode=TwoWay}" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="Username"/>
                     </Border>
 
                     <Border CornerRadius="8" Grid.Row="2" Margin="8" BorderThickness="1" BorderBrush="#FFD7E4D2" Background="#FFE5F0E1">
-                        <PasswordBox Height="40" PasswordChanged="PasswordBox_PasswordChanged" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="Password"/>
+                        <PasswordBox Height="40" materialDesign:TextFieldAssist.DecorationVisibility="Collapsed" PasswordChanged="PasswordBox_PasswordChanged" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="Password"/>
                     </Border>
 
                     <StackPanel Margin="12,8" Grid.Row="3" Orientation="Horizontal">
