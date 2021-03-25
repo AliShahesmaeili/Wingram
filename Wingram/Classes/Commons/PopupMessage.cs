@@ -12,12 +12,12 @@ namespace Wingram.Classes.Commons
     public class PopupMessage
     {
         private static PopupMessageViewModel _popupMessageViewModel;
-        private static TaskCompletionSource<ContentDialogResultEnum> _dialogTaskCompletionSource;
+        private static TaskCompletionSource<(ContentDialogResultEnum, string)> _dialogTaskCompletionSource;
 
-        public static async Task<ContentDialogResultEnum> ShowAsync(string message, string title = null, string primary = null, string secondary = null, string primaryParameter = null, string secondaryParameter = null)
+        public static async Task<(ContentDialogResultEnum, string)> ShowAsync(string message, string title = null, string primary = null, string secondary = null, string primaryParameter = null, string secondaryParameter = null)
         {
             _popupMessageViewModel = InstaContainer.Current.Resolve<PopupMessageViewModel>();
-            _dialogTaskCompletionSource = new TaskCompletionSource<ContentDialogResultEnum>();
+            _dialogTaskCompletionSource = new TaskCompletionSource<(ContentDialogResultEnum, string)>();
 
             _popupMessageViewModel.Message = message;
             _popupMessageViewModel.Title = title;
@@ -37,10 +37,10 @@ namespace Wingram.Classes.Commons
         }
 
 
-        public static async Task<ContentDialogResultEnum> ShowAsync(string message, string title, List<Instagram.Classes.Button> buttons)
+        public static async Task<(ContentDialogResultEnum, string)> ShowAsync(string message, string title, List<Instagram.Classes.Button> buttons)
         {
             _popupMessageViewModel = InstaContainer.Current.Resolve<PopupMessageViewModel>();
-            _dialogTaskCompletionSource = new TaskCompletionSource<ContentDialogResultEnum>();
+            _dialogTaskCompletionSource = new TaskCompletionSource<(ContentDialogResultEnum, string)>();
 
             _popupMessageViewModel.Message = message;
             _popupMessageViewModel.Title = title;

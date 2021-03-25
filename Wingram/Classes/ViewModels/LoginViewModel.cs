@@ -11,19 +11,12 @@ namespace Wingram.Classes.ViewModels
 {
     public class LoginViewModel : InstaBaseViewModel
     {
-        private ICommand loginCommand;
+        #region Privates
         private string username, password;
-        public LoginViewModel(IInstagramService instagramService) : base(instagramService)
-        {
-            LoginCommand = new RelayCommand(LoginAsync);
-        }
+        #endregion
 
-
-        public ICommand LoginCommand
-        {
-            get => loginCommand;
-            set => Set(ref loginCommand, value);
-        }
+        #region Publics
+        public RelayCommand LoginCommand { get; }
         public string Username
         {
             get => username;
@@ -34,9 +27,18 @@ namespace Wingram.Classes.ViewModels
             get => password;
             set => Set(ref password, value);
         }
+        #endregion
+
+        #region Constractors
+        public LoginViewModel(IInstagramService instagramService) : base(instagramService)
+        {
+            LoginCommand = new RelayCommand(LoginAsync);
+        }
+        #endregion
+
+        #region Functions
         public async void LoginAsync()
         {
-
             InstagramService.InstagramApi().SetUser(Username, Password);
             var result = await InstagramService.InstagramApi().LoginAsync();
             if (result.Succeeded)
@@ -45,8 +47,37 @@ namespace Wingram.Classes.ViewModels
             }
             else
             {
-                await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle, result.OtherValue.Buttons);
+                var popupResult = await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle, result.OtherValue.Buttons);
+                if (popupResult.Item2.Equals("login_with_facebook"))
+                {
+
+                }
+                else if (popupResult.Item2.Equals("forgot_password_flow"))
+                {
+
+                }
+                else if (popupResult.Item2.Equals("switch_to_signup_flow"))
+                {
+
+                }
+                else if (popupResult.Item2.Equals("send_password_reset_email"))
+                {
+
+                }
+                else if (popupResult.Item2.Equals("send_one_click_login_email"))
+                {
+
+                }
+                else if (popupResult.Item2.Equals("go_to_helper_url"))
+                {
+
+                }
+                else if (popupResult.Item2.Equals("dismiss"))
+                {
+
+                }
             }
         }
+        #endregion
     }
 }

@@ -23,8 +23,8 @@ namespace Wingram.Classes.ViewModels
         public RelayCommand SecondaryCommand { get; }
 
 
-        private TaskCompletionSource<ContentDialogResultEnum> taskCompletionSource;
-        public TaskCompletionSource<ContentDialogResultEnum> TaskCompletionSource
+        private TaskCompletionSource<(ContentDialogResultEnum, string)> taskCompletionSource;
+        public TaskCompletionSource<(ContentDialogResultEnum, string)> TaskCompletionSource
         {
             get => taskCompletionSource;
             set => Set(ref taskCompletionSource, value);
@@ -86,11 +86,11 @@ namespace Wingram.Classes.ViewModels
        
         private void PrimaryExecute()
         {
-            TaskCompletionSource.TrySetResult(ContentDialogResultEnum.Primary);
+            TaskCompletionSource.TrySetResult((ContentDialogResultEnum.Primary, PrimaryButtonParameter));
         }
         private void SecondaryExecute()
         {
-            TaskCompletionSource.TrySetResult(ContentDialogResultEnum.Secondary);
+            TaskCompletionSource.TrySetResult((ContentDialogResultEnum.Secondary, SecondaryButtonParameter));
         }
     }
 }
