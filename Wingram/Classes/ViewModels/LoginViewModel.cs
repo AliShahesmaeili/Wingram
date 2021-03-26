@@ -13,6 +13,7 @@ namespace Wingram.Classes.ViewModels
     {
         #region Privates
         private string username, password;
+        private bool isLoading;
         #endregion
 
         #region Publics
@@ -27,6 +28,11 @@ namespace Wingram.Classes.ViewModels
             get => password;
             set => Set(ref password, value);
         }
+        public bool IsLoading
+        {
+            get => isLoading;
+            set => Set(ref isLoading, value);
+        }
         #endregion
 
         #region Constractors
@@ -39,14 +45,14 @@ namespace Wingram.Classes.ViewModels
         #region Functions
         public async void LoginAsync()
         {
-            ApplicationViewModel.IsLoading = true;
+            IsLoading= ApplicationViewModel.IsLoading = true;
             InstagramService.InstagramApi().SetUser(Username, Password);
             var result = await InstagramService.InstagramApi().LoginAsync();
             if (result.Succeeded)
             {
                 // await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle);
             }
-            else
+            else if (result.OtherValue != null)
             {
                 var popupResult = await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle, result.OtherValue.Buttons);
                 if (popupResult.Item2.Equals("login_with_facebook"))
@@ -78,7 +84,11 @@ namespace Wingram.Classes.ViewModels
 
                 }
             }
-            ApplicationViewModel.IsLoading = false;
+            else
+            {
+                await PopupMessage.ShowAsync(result.Info.Message, "Error", "Ok");
+            }
+            IsLoading= ApplicationViewModel.IsLoading = false;
         }
         #endregion
     }
