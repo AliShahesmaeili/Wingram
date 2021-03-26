@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wingram" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" BorderBrush="#4894FF"
-        mc:Ignorable="d" Loaded="Window_Loaded"
+        mc:Ignorable="d" Loaded="Window_Loaded" DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=ApplicationViewModel}"
         Title="MainWindow" Height="600" Width="1024">
     <Grid>
         <Frame x:Name="FrameMain" NavigationUIVisibility="Hidden"/>

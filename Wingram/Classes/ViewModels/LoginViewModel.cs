@@ -30,7 +30,7 @@ namespace Wingram.Classes.ViewModels
         #endregion
 
         #region Constractors
-        public LoginViewModel(IInstagramService instagramService) : base(instagramService)
+        public LoginViewModel(IInstagramService instagramService, ApplicationViewModel applicationViewModel) : base(instagramService, applicationViewModel)
         {
             LoginCommand = new RelayCommand(LoginAsync);
         }
@@ -39,6 +39,7 @@ namespace Wingram.Classes.ViewModels
         #region Functions
         public async void LoginAsync()
         {
+            ApplicationViewModel.IsLoading = true;
             InstagramService.InstagramApi().SetUser(Username, Password);
             var result = await InstagramService.InstagramApi().LoginAsync();
             if (result.Succeeded)
@@ -77,6 +78,7 @@ namespace Wingram.Classes.ViewModels
 
                 }
             }
+            ApplicationViewModel.IsLoading = false;
         }
         #endregion
     }

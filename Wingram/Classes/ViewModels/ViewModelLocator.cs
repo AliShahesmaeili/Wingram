@@ -42,8 +42,9 @@ namespace Wingram.Classes.ViewModels
                 builder.RegisterType<InstaBaseViewModel>().SingleInstance();
                 builder.RegisterType<LoginViewModel>().SingleInstance();
                 builder.RegisterType<PopupMessageViewModel>().SingleInstance();
+                builder.RegisterType<ApplicationViewModel>().SingleInstance();
 
-                
+
                 return builder.Build();
             });
         }
@@ -51,6 +52,7 @@ namespace Wingram.Classes.ViewModels
 
         public LoginViewModel LoginViewModel => InstaContainer.Current.Resolve<LoginViewModel>();
         public PopupMessageViewModel PopupMessageViewModel => InstaContainer.Current.Resolve<PopupMessageViewModel>();
+        public ApplicationViewModel ApplicationViewModel => InstaContainer.Current.Resolve<ApplicationViewModel>();
 
     }
 }

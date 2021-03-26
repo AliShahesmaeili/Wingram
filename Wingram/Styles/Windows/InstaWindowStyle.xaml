@@ -132,7 +132,7 @@
                                             </Button>
                                         </StackPanel>
                                     </Grid>
-                                    <ProgressBar VerticalAlignment="Top" IsIndeterminate="True"/>
+                                    <ProgressBar VerticalAlignment="Top" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}" IsIndeterminate="{Binding IsLoading}"/>
                                     <!-- resize grip -->
                                     <Grid Grid.Row="1" x:Name="ResizeGrip" Background="Transparent" Visibility="Collapsed" HorizontalAlignment="Right" VerticalAlignment="Bottom" WindowChrome.ResizeGripDirection="BottomRight">
                                         <materialDesign:PackIcon Kind="ResizeBottomRight" Foreground="#4894FF" Width="24" Height="24" Margin="1" />
