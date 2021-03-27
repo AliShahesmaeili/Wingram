@@ -49,7 +49,7 @@
 
                     <TextBlock Text="Wingram"  FontSize="30" Margin="8" FontFamily="Lobster Two" HorizontalAlignment="Center" Foreground="#FF686868"/>
                     <Border CornerRadius="8" Grid.Row="1" Margin="8,16,8,8" BorderThickness="1" BorderBrush="#FFD7E4D2" Background="#FFE5F0E1">
-                        <TextBox Height="40" materialDesign:TextFieldAssist.DecorationVisibility="Collapsed" Text="{Binding Username, Mode=TwoWay}" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="Username"/>
+                        <TextBox Height="40" materialDesign:TextFieldAssist.DecorationVisibility="Collapsed" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="Username"/>
                     </Border>
 
                     <Border CornerRadius="8" Grid.Row="2" Margin="8" BorderThickness="1" BorderBrush="#FFD7E4D2" Background="#FFE5F0E1">
@@ -68,7 +68,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Grid.Row="5" Command="{Binding LoginCommand}" Margin="8" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="8" Height="42" Background="{StaticResource PrimaryHueMidBrush}">
+                    <Button Grid.Row="5" IsEnabled="{Binding ActiveLoginButton}" Command="{Binding LoginCommand}" Margin="8" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="8" Height="42" Background="{StaticResource PrimaryHueMidBrush}">
                         <Button.Effect>
                             <DropShadowEffect Direction="270" Color="#FFCFE2FD" ShadowDepth="20" BlurRadius="100"/>
                         </Button.Effect>

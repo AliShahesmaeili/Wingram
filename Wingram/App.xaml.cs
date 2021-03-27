@@ -21,7 +21,7 @@ namespace Wingram
 
         public App()
         {
-            Locator.LoadSessionsAsync();
+            Locator.LoadSessions();
         }
 
         protected override void OnStartup(StartupEventArgs e)

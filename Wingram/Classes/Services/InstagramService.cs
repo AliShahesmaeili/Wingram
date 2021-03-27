@@ -25,7 +25,11 @@ namespace Wingram.Classes.Services
         {
             using var context = new WingramContext();
             instaApi = InstaApiBuilder.CreateBuilder().Build();
-            instaApi.LoadStateData(await context.Account.Include(a => a.DeviceInfo).FirstOrDefaultAsync(a => a.Id == AccountId));
+            var account = await context.Account.Include(a => a.DeviceInfo).FirstOrDefaultAsync(a => a.Id == AccountId);
+            if (account.IsAuthenticated)
+            {
+                instaApi.LoadStateData(account);
+            }
         }
         public IInstaApi InstagramApi()
         {

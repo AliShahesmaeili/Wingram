@@ -13,7 +13,7 @@ namespace Wingram.Classes.ViewModels
     {
         #region Privates
         private string username, password;
-        private bool isLoading;
+        private bool isLoading, activeLoginButton;
         #endregion
 
         #region Publics
@@ -21,17 +21,30 @@ namespace Wingram.Classes.ViewModels
         public string Username
         {
             get => username;
-            set => Set(ref username, value);
+            set
+            {
+                Set(ref username, value);
+                ActiveLoginButton = !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);
+            }
         }
         public string Password
         {
             get => password;
-            set => Set(ref password, value);
+            set
+            {
+                Set(ref password, value);
+                ActiveLoginButton = !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);
+            }
         }
         public bool IsLoading
         {
             get => isLoading;
             set => Set(ref isLoading, value);
+        }
+        public bool ActiveLoginButton
+        {
+            get => activeLoginButton;
+            set => Set(ref activeLoginButton, value);
         }
         #endregion
 
@@ -54,8 +67,6 @@ namespace Wingram.Classes.ViewModels
             }
             else if (result.OtherValue != null)
             {
-                var account = InstagramService.InstagramApi().GetStateData();
-
                 var popupResult = await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle, result.OtherValue.Buttons);
                 if (popupResult.Item2.Equals("login_with_facebook"))
                 {
@@ -90,6 +101,7 @@ namespace Wingram.Classes.ViewModels
             {
                 await PopupMessage.ShowAsync(result.Info.Message, "Error", "Ok");
             }
+
             IsLoading = ApplicationViewModel.IsLoading = false;
         }
         #endregion

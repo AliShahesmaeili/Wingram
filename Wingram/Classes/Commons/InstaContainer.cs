@@ -32,12 +32,12 @@ namespace Wingram.Classes.Commons
             }
         }
 
-        public Autofac.IContainer Build(int id, Func<ContainerBuilder, int, Autofac.IContainer> factory)
+        public Autofac.IContainer Build(int number, Func<ContainerBuilder, int, Autofac.IContainer> factory)
         {
             var builder = new ContainerBuilder();
            
 
-            return _containers[id] = factory(builder, id);
+            return _containers[number] = factory(builder, number);
         }
 
         public void Destroy(int id)

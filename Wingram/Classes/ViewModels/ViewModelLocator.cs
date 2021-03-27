@@ -14,7 +14,7 @@ namespace Wingram.Classes.ViewModels
     public class ViewModelLocator
     {
         private InstaContainer _container;
-
+        private int num = 1;
         public ViewModelLocator()
         {
             _container = InstaContainer.Current;
@@ -24,21 +24,26 @@ namespace Wingram.Classes.ViewModels
             using var context = new WingramContext();
             var entityEntry = await context.Account.AddAsync(new Instagram.Classes.Account());
             await context.SaveChangesAsync();
-            Configure(entityEntry.Entity.Id);
+            Configure(num + 1, entityEntry.Entity.Id);
         }
-        public async void LoadSessionsAsync()
+        public async void LoadSessions()
         {
             using var context = new WingramContext();
-            foreach (var account in await context.Account.ToListAsync())
+            var accounts = await context.Account.ToListAsync();
+
+            foreach (var account in accounts)
             {
-                Configure(account.Id);
+                Configure(num, account.Id);
+                num++;
             }
+            if (accounts.Count == 0)
+                await ConfigureNewAccount();
         }
-        private IContainer Configure(int id)
+        private IContainer Configure(int number, int accountId)
         {
-            return _container.Build(id, (builder, session) =>
+            return _container.Build(number, (builder, session) =>
             {
-                builder.RegisterType<InstagramService>().As<IInstagramService>().WithParameter("accountId", id).SingleInstance();
+                builder.RegisterType<InstagramService>().As<IInstagramService>().WithParameter("accountId", accountId).SingleInstance();
                 builder.RegisterType<InstaBaseViewModel>().SingleInstance();
                 builder.RegisterType<LoginViewModel>().SingleInstance();
                 builder.RegisterType<PopupMessageViewModel>().SingleInstance();
