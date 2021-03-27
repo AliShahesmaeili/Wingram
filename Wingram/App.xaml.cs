@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,7 +30,6 @@ namespace Wingram
             var theme = paletteHelper.GetTheme();
             theme.SetPrimaryColor(Color.FromRgb(101, 162, 248));
             paletteHelper.SetTheme(theme);
-
             new MainWindow().Show();
         }
     }

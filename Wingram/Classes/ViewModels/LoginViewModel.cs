@@ -45,15 +45,17 @@ namespace Wingram.Classes.ViewModels
         #region Functions
         public async void LoginAsync()
         {
-            IsLoading= ApplicationViewModel.IsLoading = true;
+            IsLoading = ApplicationViewModel.IsLoading = true;
             InstagramService.InstagramApi().SetUser(Username, Password);
             var result = await InstagramService.InstagramApi().LoginAsync();
             if (result.Succeeded)
             {
-                // await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle);
+                await InstagramService.UpdateAccountAsync();
             }
             else if (result.OtherValue != null)
             {
+                var account = InstagramService.InstagramApi().GetStateData();
+
                 var popupResult = await PopupMessage.ShowAsync(result.OtherValue.Message, result.OtherValue.ErrorTitle, result.OtherValue.Buttons);
                 if (popupResult.Item2.Equals("login_with_facebook"))
                 {
@@ -88,7 +90,7 @@ namespace Wingram.Classes.ViewModels
             {
                 await PopupMessage.ShowAsync(result.Info.Message, "Error", "Ok");
             }
-            IsLoading= ApplicationViewModel.IsLoading = false;
+            IsLoading = ApplicationViewModel.IsLoading = false;
         }
         #endregion
     }

@@ -38,7 +38,7 @@ namespace Wingram.Classes.ViewModels
         {
             return _container.Build(id, (builder, session) =>
             {
-                builder.RegisterType<InstagramService>().As<IInstagramService>().SingleInstance();
+                builder.RegisterType<InstagramService>().As<IInstagramService>().WithParameter("accountId", id).SingleInstance();
                 builder.RegisterType<InstaBaseViewModel>().SingleInstance();
                 builder.RegisterType<LoginViewModel>().SingleInstance();
                 builder.RegisterType<PopupMessageViewModel>().SingleInstance();

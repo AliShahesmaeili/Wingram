@@ -33,11 +33,11 @@ namespace Wingram
         {
             FrameMain.Navigate(new LoginPage());
 
-            using var context = new WingramContext();
+            //using var context = new WingramContext();
             //await context.Account.AddAsync(new Instagram.Classes.Account() { Username = "asd", InstagramId = 5432 });
             //await context.SaveChangesAsync();
 
-            var asdasd =await context.Account.ToListAsync();
+         //   var asdasd =await context.Account.ToListAsync();
         }
     }
 }

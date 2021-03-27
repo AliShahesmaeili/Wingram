@@ -1,5 +1,7 @@
 ﻿using Instagram.API;
 using Instagram.API.Builder;
+using Instagram.Classes;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,18 +14,31 @@ namespace Wingram.Classes.Services
     public class InstagramService : IInstagramService
     {
         private IInstaApi instaApi;
-        public InstagramService()
+        int AccountId;
+        public InstagramService(int accountId)
         {
+            AccountId = accountId;
             Initialize();
         }
 
-        private void Initialize()
+        private async void Initialize()
         {
+            using var context = new WingramContext();
             instaApi = InstaApiBuilder.CreateBuilder().Build();
+            instaApi.LoadStateData(await context.Account.Include(a => a.DeviceInfo).FirstOrDefaultAsync(a => a.Id == AccountId));
         }
         public IInstaApi InstagramApi()
         {
             return instaApi;
+        }
+
+        public async Task UpdateAccountAsync()
+        {
+            using var context = new WingramContext();
+            var account = instaApi.GetStateData();
+            account.Id = AccountId;
+            context.Account.Update(account);
+            await context.SaveChangesAsync();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Instagram.API;
+using Instagram.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Wingram.Interfaces
     public interface IInstagramService
     {
         IInstaApi InstagramApi();
+        Task UpdateAccountAsync();
     }
 }
