@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Instagram.API;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace Wingram.Classes.ViewModels
         }
 
         public IInstagramService InstagramService => _instagramService;
+        public IInstaApi InstagramAPI => InstagramService.InstagramApi();
         public ApplicationViewModel ApplicationViewModel => _applicationViewModel;
     }
 }

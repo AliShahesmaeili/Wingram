@@ -59,8 +59,8 @@ namespace Wingram.Classes.ViewModels
         public async void LoginAsync()
         {
             IsLoading = ApplicationViewModel.IsLoading = true;
-            InstagramService.InstagramApi().SetUser(Username, Password);
-            var result = await InstagramService.InstagramApi().LoginAsync();
+            InstagramAPI.SetUser(Username, Password);
+            var result = await InstagramAPI.LoginAsync();
             if (result.Succeeded)
             {
                 await InstagramService.UpdateAccountAsync();

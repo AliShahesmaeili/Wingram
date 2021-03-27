@@ -8,10 +8,34 @@
 
   <ItemGroup>
     <None Remove="Assets\Database\Wingram.db" />
+    <None Remove="Assets\Languages\values-af\plurals.xml" />
+    <None Remove="Assets\Languages\values-af\raws.xml" />
+    <None Remove="Assets\Languages\values-af\strings.xml" />
+    <None Remove="Assets\Languages\values-fa\plurals.xml" />
+    <None Remove="Assets\Languages\values-fa\raws.xml" />
+    <None Remove="Assets\Languages\values-fa\strings.xml" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\Database\Wingram.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Languages\values-af\plurals.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Languages\values-af\raws.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Languages\values-af\strings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Languages\values-fa\plurals.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Languages\values-fa\raws.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Languages\values-fa\strings.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
