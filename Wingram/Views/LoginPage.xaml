@@ -1,6 +1,6 @@
 ﻿<Page x:Class="Wingram.Views.LoginPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontFamily="{Binding Source={StaticResource Constants}, Path=ApplicationFontFamily}"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:converters="clr-namespace:Wingram.Classes.Converters"
       xmlns:local="clr-namespace:Wingram.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:markups="clr-namespace:Wingram.Classes.Commons.MarkupExtensions"

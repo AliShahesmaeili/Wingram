@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using Wingram.Classes.Commons;
 
 namespace Wingram.Classes
@@ -13,5 +14,7 @@ namespace Wingram.Classes
     {
         public static string ApplicationDirectory => Directory.GetCurrentDirectory();
         public static FlowDirection ApplicationFlowDirection => LocalizationManager.Instance.CurrentCulture.TextInfo.IsRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+        public static FontFamily ApplicationFontFamily => FontManager.GetSuitableFontFamily();
+
     }
 }
