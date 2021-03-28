@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,11 @@ namespace Wingram.Views.Controls
     {
         public InstaPage()
         {
-            FlowDirection = Classes.Constants.ApplicationFlowDirection;
-            FontFamily = Classes.Constants.ApplicationFontFamily;
+            if (!DesignerProperties.GetIsInDesignMode(this))
+            {
+                FlowDirection = Classes.Constants.ApplicationFlowDirection;
+                FontFamily = Classes.Constants.ApplicationFontFamily;
+            }
         }
     }
 }
