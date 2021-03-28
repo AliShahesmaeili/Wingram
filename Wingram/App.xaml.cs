@@ -31,6 +31,7 @@ namespace Wingram
             var paletteHelper = new PaletteHelper();
             var theme = paletteHelper.GetTheme();
             theme.SetPrimaryColor(Color.FromRgb(101, 162, 248));
+            theme.SetSecondaryColor(Color.FromRgb(126, 217, 61));
             paletteHelper.SetTheme(theme);
             LoadLanguages();
             new MainWindow().Show();

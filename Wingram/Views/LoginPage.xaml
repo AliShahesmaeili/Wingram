@@ -63,8 +63,8 @@
 
                     <Button Grid.Row="4" Margin="8" Height="42" Background="#FFE5F0E1" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="8">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Width="18" VerticalAlignment="Center" Height="18" Foreground="#7ED93D" Kind="Facebook"/>
-                            <TextBlock Text="{markups:Localize log_in_with_facebook}" Margin="4,0,0,0" Foreground="#7ED93D"/>
+                            <materialDesign:PackIcon Width="18" VerticalAlignment="Center" Height="18" Foreground="{DynamicResource SecondaryHueMidBrush}" Kind="Facebook"/>
+                            <TextBlock Text="{markups:Localize log_in_with_facebook}" Margin="4,0,0,0" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                         </StackPanel>
                     </Button>
 
