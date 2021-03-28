@@ -13,13 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wingram.Classes.ViewModels;
+using Wingram.Views.Controls;
 
 namespace Wingram.Views
 {
     /// <summary>
     /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class LoginPage : InstaPage
     {
         LoginViewModel loginViewModel => DataContext as LoginViewModel;
         public LoginPage()
