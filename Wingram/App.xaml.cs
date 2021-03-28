@@ -51,6 +51,9 @@ namespace Wingram
                         LocalizationXmlFileReader.GetEntries(filename));
                 }
             }
+
+            LocalizationManager.Instance.CurrentCulture = CultureInfo.GetCultureInfo("fa");
+
         }
     }
 }
