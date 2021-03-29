@@ -48,7 +48,7 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Text="Wingram"  FontSize="30" Margin="8" FontFamily="Lobster Two" HorizontalAlignment="Center" Foreground="#FF686868"/>
+                        <TextBlock Text="{markups:Localize log_in}" FontWeight="Bold" FontSize="20" Margin="8" HorizontalAlignment="Left" Foreground="#FF686868"/>
                         <Border CornerRadius="8" Grid.Row="1" Margin="8,16,8,8" BorderThickness="1" BorderBrush="#FFD7E4D2" Background="#FFE5F0E1">
                             <TextBox Height="40" materialDesign:TextFieldAssist.DecorationVisibility="Collapsed" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="{markups:Localize username_hint_login}"/>
                         </Border>
@@ -58,14 +58,14 @@
                         </Border>
 
                         <StackPanel Margin="12,8" Grid.Row="3" Orientation="Horizontal">
-                            <TextBlock FontSize="10" Style="{StaticResource MaterialDesignOverlineTextBlock}" Text="{markups:Localize user_forgot_password_message}"/>
-                            <TextBlock FontSize="10" Style="{StaticResource MaterialDesignOverlineTextBlock}" Background="Transparent" Cursor="Hand" Margin="4,0,0,0" FontWeight="Bold" Foreground="{StaticResource PrimaryHueMidBrush}" Text="Get help logging in."/>
+                            <TextBlock FontSize="8" Text="{markups:Localize user_forgot_password_message}"/>
+                            <TextBlock FontSize="8" Background="Transparent" Cursor="Hand" Margin="4,0,0,0" FontWeight="Bold" Foreground="{StaticResource PrimaryHueMidBrush}" Text="{markups:Localize user_forgot_password_message_help}"/>
                         </StackPanel>
 
                         <Button Grid.Row="4" Margin="8" Height="42" Background="#FFE5F0E1" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="8">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Width="18" VerticalAlignment="Center" Height="18" Foreground="{DynamicResource SecondaryHueMidBrush}" Kind="Facebook"/>
-                                <TextBlock Text="{markups:Localize log_in_with_facebook}" Margin="4,0,0,0" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
+                                <TextBlock Text="{markups:Localize log_in_with_facebook}" FontSize="12" Margin="4,0,0,0" Foreground="{DynamicResource SecondaryHueMidBrush}"/>
                             </StackPanel>
                         </Button>
 
@@ -74,7 +74,7 @@
                                 <DropShadowEffect Direction="270" Color="#FFCFE2FD" ShadowDepth="20" BlurRadius="100"/>
                             </Button.Effect>
 
-                            <TextBlock Text="{markups:Localize log_in_title}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            <TextBlock Text="{markups:Localize log_in_title}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12" FontWeight="Bold"/>
                         </Button>
                     </Grid>
 

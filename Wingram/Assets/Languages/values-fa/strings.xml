@@ -461,8 +461,9 @@
     <string name="update_contact_info">اطلاعات تماس به‌روزرسانی شود؟</string>
     <string name="update_contact_info_subtitle">این اطلاعات جایگزین اطلاعات تماسی می‌شود که قبلاً ذخیره کرده بودید.</string>
     <string name="user_avatar">چهره‌نمای کاربر</string>
-    <string name="user_forgot_password_message">جزئیات ورود به سیستمتان را فراموش کردید؟ &lt;b&gt;برای ورود به سیستم راهنمایی دریافت کنید.&lt;/b&gt;</string>
-    <string name="user_signup_message">حساب ندارید؟ &lt;b&gt;نام‌نویسی کنید.&lt;/b&gt;</string>
+    <string name="user_forgot_password_message">جزئیات ورود به حسابتان را فراموش کردید؟</string>
+    <string name="user_forgot_password_message_help">برای ورود راهنمایی دریافت کنید</string>
+	<string name="user_signup_message">حساب ندارید؟ &lt;b&gt;نام‌نویسی کنید.&lt;/b&gt;</string>
     <string name="username">نام کاربری</string>
     <string name="username_clear_icon_description">پاک کردن نام کاربری</string>
     <string name="username_hint_access">نام کاربری، ایمیل یا تلفن</string>
