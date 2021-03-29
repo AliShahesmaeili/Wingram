@@ -39,5 +39,10 @@ namespace Wingram
 
          //   var asdasd =await context.Account.ToListAsync();
         }
+
+        private void FrameMain_Navigated(object sender, NavigationEventArgs e)
+        {
+            FrameMain.NavigationService.RemoveBackEntry();
+        }
     }
 }

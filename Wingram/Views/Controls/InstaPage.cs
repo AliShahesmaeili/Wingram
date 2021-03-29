@@ -7,10 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Wingram.Enums;
 
 namespace Wingram.Views.Controls
 {
-    public class InstaPage : Page
+    public abstract class InstaPage : Page
     {
         public static DependencyProperty ContentPageProperty =
     DependencyProperty.Register("ContentPage", typeof(object), typeof(InstaPage));
@@ -37,6 +38,11 @@ namespace Wingram.Views.Controls
             transitioningContent.OpeningEffects.Add(new TransitionEffect(TransitionEffectKind.FadeIn));
             transitioningContent.OpeningEffects.Add(new TransitionEffect(TransitionEffectKind.SlideInFromLeft));
             Content = transitioningContent;
+        }
+
+        public virtual void PageLoad(PageLoadEnum pageLoadEnum, Dictionary<string, object> parameters)
+        {
+
         }
     }
 }

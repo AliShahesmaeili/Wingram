@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Wingram.Enums;
+using Wingram.Views.Controls;
 
 namespace Wingram.Classes.ViewModels
 {
@@ -11,6 +13,8 @@ namespace Wingram.Classes.ViewModels
     {
         #region Privates
         private bool isLoding;
+        private object frameContent;
+        private Dictionary<Type, InstaPage> pageHistories;
         #endregion
 
         #region Publics
@@ -19,10 +23,46 @@ namespace Wingram.Classes.ViewModels
             get => isLoding;
             set => Set(ref isLoding, value);
         }
+        public object FrameContent
+        {
+            get => frameContent;
+            set => Set(ref frameContent, value);
+        }
         #endregion
 
         #region Constractors
+        public ApplicationViewModel()
+        {
+            pageHistories = new Dictionary<Type, InstaPage>();
+        }
+        #endregion
 
+        #region Functions
+        public void Navigate(Type instaPageType, bool newPage = true, Dictionary<string, object> parameters = null)
+        {
+            var pageLoadEnum = PageLoadEnum.New;
+            InstaPage instaPage = null;
+            if (newPage)
+            {
+                FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage;
+                pageHistories.Add(instaPageType, instaPage);
+            }
+            else if (pageHistories.ContainsKey(instaPageType))
+            {
+                FrameContent = instaPage = pageHistories[instaPageType];
+                pageLoadEnum = PageLoadEnum.Refresh;
+            }
+            else
+            {
+                FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage; ;
+                pageHistories.Add(instaPageType, instaPage);
+            }
+
+            if (parameters != null)
+            {
+                instaPage.PageLoad(pageLoadEnum, parameters);
+            }
+        }
         #endregion
     }
 }

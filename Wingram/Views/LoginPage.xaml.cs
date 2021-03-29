@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wingram.Classes.ViewModels;
+using Wingram.Enums;
 using Wingram.Views.Controls;
 
 namespace Wingram.Views
@@ -27,10 +28,19 @@ namespace Wingram.Views
         {
             InitializeComponent();
         }
+        public override void PageLoad(PageLoadEnum pageLoadEnum, Dictionary<string, object> parameters)
+        {
 
+        }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             loginViewModel.Password = ((PasswordBox)sender).Password;
+        }
+
+        private void TextBlockLoginHelp_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            loginViewModel.ApplicationViewModel.Navigate(typeof(LoginPage), false, new Dictionary<string, object>() { { "asdad", 1 } });
+            // NavigationService.Navigate(new LoginPage());
         }
     }
 }

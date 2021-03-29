@@ -59,7 +59,7 @@
 
                         <StackPanel Margin="12,8" Grid.Row="3" Orientation="Horizontal">
                             <TextBlock FontSize="8" Text="{markups:Localize user_forgot_password_message}"/>
-                            <TextBlock FontSize="8" Background="Transparent" Cursor="Hand" Margin="4,0,0,0" FontWeight="Bold" Foreground="{StaticResource PrimaryHueMidBrush}" Text="{markups:Localize user_forgot_password_message_help}"/>
+                            <TextBlock x:Name="TextBlockLoginHelp" MouseUp="TextBlockLoginHelp_MouseUp" FontSize="8" Background="Transparent" Cursor="Hand" Margin="4,0,0,0" FontWeight="Bold" Foreground="{StaticResource PrimaryHueMidBrush}" Text="{markups:Localize user_forgot_password_message_help}"/>
                         </StackPanel>
 
                         <Button Grid.Row="4" Margin="8" Height="42" Background="#FFE5F0E1" Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ButtonAssist.CornerRadius="8">
