@@ -13,6 +13,7 @@ using Wingram.Classes.Commons;
 using Wingram.Classes.ViewModels;
 using Wingram.Interfaces;
 using Wingram.Views;
+using Wingram.Views.Pages;
 
 namespace Wingram
 {

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wingram.Classes.Commons;
+﻿using Wingram.Classes.Commons;
 using Wingram.Interfaces;
-using Wingram.Views;
+using Wingram.Views.Pages;
 
 namespace Wingram.Classes.ViewModels
 {

@@ -3,9 +3,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using Wingram.Classes.ViewModels;
 using Wingram.Views.Controls;
-using Wingram.Views.Pages;
 
-namespace Wingram.Views
+namespace Wingram.Views.Pages
 {
     /// <summary>
     /// Interaction logic for LoginPage.xaml
