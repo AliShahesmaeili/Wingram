@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:converters="clr-namespace:Wingram.Classes.Converters"
-      xmlns:local="clr-namespace:Wingram.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:markups="clr-namespace:Wingram.Classes.Commons.MarkupExtensions"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:markups="clr-namespace:Wingram.Classes.Commons.MarkupExtensions"
       mc:Ignorable="d" DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=LoginViewModel}"
       d:DesignHeight="600" d:DesignWidth="1024"
       Title="LoginPage">
@@ -41,7 +41,7 @@
 
                         <TextBlock Text="{markups:Localize log_in}" FontWeight="Bold" FontSize="20" Margin="8" HorizontalAlignment="Left" Foreground="#FF686868"/>
                         <Border CornerRadius="8" Grid.Row="1" Margin="8,16,8,8" BorderThickness="1" BorderBrush="#FFD7E4D2" Background="#FFE5F0E1">
-                            <TextBox Height="40" materialDesign:TextFieldAssist.DecorationVisibility="Collapsed" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="{markups:Localize username_hint_login}"/>
+                            <TextBox Height="40" materialDesign:TextFieldAssist.DecorationVisibility="Collapsed" Text="{Binding UsernameEmailPhone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" Padding="10,11,0,0" materialDesign:HintAssist.Hint="{markups:Localize username_hint_login}"/>
                         </Border>
 
                         <Border CornerRadius="8" Grid.Row="2" Margin="8" BorderThickness="1" BorderBrush="#FFD7E4D2" Background="#FFE5F0E1">

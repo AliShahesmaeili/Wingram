@@ -12,19 +12,19 @@ namespace Wingram.Classes.ViewModels
     public class LoginViewModel : InstaBaseViewModel
     {
         #region Privates
-        private string username, password;
+        private string usernameEmailPhone, password;
         private bool isLoading, activeLoginButton;
         #endregion
 
         #region Publics
         public RelayCommand LoginCommand { get; }
-        public string Username
+        public string UsernameEmailPhone
         {
-            get => username;
+            get => usernameEmailPhone;
             set
             {
-                Set(ref username, value);
-                ActiveLoginButton = !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);
+                Set(ref usernameEmailPhone, value);
+                ActiveLoginButton = !string.IsNullOrWhiteSpace(UsernameEmailPhone) && !string.IsNullOrWhiteSpace(Password);
             }
         }
         public string Password
@@ -33,7 +33,7 @@ namespace Wingram.Classes.ViewModels
             set
             {
                 Set(ref password, value);
-                ActiveLoginButton = !string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password);
+                ActiveLoginButton = !string.IsNullOrWhiteSpace(UsernameEmailPhone) && !string.IsNullOrWhiteSpace(Password);
             }
         }
         public bool IsLoading
@@ -51,15 +51,15 @@ namespace Wingram.Classes.ViewModels
         #region Constractors
         public LoginViewModel(IInstagramService instagramService, ApplicationViewModel applicationViewModel) : base(instagramService, applicationViewModel)
         {
-            LoginCommand = new RelayCommand(LoginAsync);
+            LoginCommand = new RelayCommand(Login);
         }
         #endregion
 
         #region Functions
-        public async void LoginAsync()
+        public async void Login()
         {
             IsLoading = ApplicationViewModel.IsLoading = true;
-            InstagramAPI.SetUser(Username, Password);
+            InstagramAPI.SetUser(UsernameEmailPhone, Password);
             var result = await InstagramAPI.LoginAsync();
             if (result.Succeeded)
             {

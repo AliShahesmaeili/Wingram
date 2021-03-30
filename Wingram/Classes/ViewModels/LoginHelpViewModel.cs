@@ -8,19 +8,19 @@ namespace Wingram.Classes.ViewModels
     {
         #region Privates
         private string usernameEmailPhone;
-        private bool isLoading, activeLoginButton;
+        private bool isLoading, activeNextButton;
         #endregion
 
         #region Publics
         public RelayCommand LoginCommand { get; }
-        public RelayCommand D { get; }
+        public RelayCommand NextCommand { get; }
         public string UsernameEmailPhone
         {
             get => usernameEmailPhone;
             set
             {
                 Set(ref usernameEmailPhone, value);
-                ActiveLoginButton = !string.IsNullOrWhiteSpace(usernameEmailPhone);
+                ActiveNextButton = !string.IsNullOrWhiteSpace(usernameEmailPhone);
             }
         }
 
@@ -29,10 +29,10 @@ namespace Wingram.Classes.ViewModels
             get => isLoading;
             set => Set(ref isLoading, value);
         }
-        public bool ActiveLoginButton
+        public bool ActiveNextButton
         {
-            get => activeLoginButton;
-            set => Set(ref activeLoginButton, value);
+            get => activeNextButton;
+            set => Set(ref activeNextButton, value);
         }
         #endregion
 
@@ -40,6 +40,7 @@ namespace Wingram.Classes.ViewModels
         public LoginHelpViewModel(IInstagramService instagramService, ApplicationViewModel applicationViewModel) : base(instagramService, applicationViewModel)
         {
             LoginCommand = new RelayCommand(Login);
+            NextCommand = new RelayCommand(Next);
         }
         #endregion
 
@@ -47,6 +48,11 @@ namespace Wingram.Classes.ViewModels
         public void Login()
         {
             ApplicationViewModel.Navigate(typeof(LoginPage), false);
+        }
+
+        public void Next()
+        {
+            
         }
         #endregion
     }
