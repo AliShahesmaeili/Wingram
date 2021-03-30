@@ -11,6 +11,8 @@ using System.Windows;
 using System.Windows.Media;
 using Wingram.Classes.Commons;
 using Wingram.Classes.ViewModels;
+using Wingram.Interfaces;
+using Wingram.Views;
 
 namespace Wingram
 {
@@ -34,7 +36,14 @@ namespace Wingram
             theme.SetSecondaryColor(Color.FromRgb(126, 217, 61));
             paletteHelper.SetTheme(theme);
             LoadLanguages();
-            new MainWindow().Show();
+         
+            Current.MainWindow = new MainWindow();
+            Current.MainWindow.Show();
+            var instagramService = InstaContainer.Current.Resolve<IInstagramService>();
+            var applicationViewModel = InstaContainer.Current.Resolve<ApplicationViewModel>();
+            if (instagramService.InstagramApi().IsUserAuthenticated)
+                applicationViewModel.Navigate(typeof(LoginPage));
+            else applicationViewModel.Navigate(typeof(LoginPage));
         }
 
         private void LoadLanguages()

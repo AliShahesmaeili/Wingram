@@ -48,7 +48,7 @@ namespace Wingram.Classes.ViewModels
                 builder.RegisterType<LoginViewModel>().SingleInstance();
                 builder.RegisterType<PopupMessageViewModel>().SingleInstance();
                 builder.RegisterType<ApplicationViewModel>().SingleInstance();
-
+                builder.RegisterType<LoginHelpViewModel>().SingleInstance();
 
                 return builder.Build();
             });
@@ -58,6 +58,6 @@ namespace Wingram.Classes.ViewModels
         public LoginViewModel LoginViewModel => InstaContainer.Current.Resolve<LoginViewModel>();
         public PopupMessageViewModel PopupMessageViewModel => InstaContainer.Current.Resolve<PopupMessageViewModel>();
         public ApplicationViewModel ApplicationViewModel => InstaContainer.Current.Resolve<ApplicationViewModel>();
-
+        public LoginHelpViewModel LoginHelpViewModel => InstaContainer.Current.Resolve<LoginHelpViewModel>();
     }
 }

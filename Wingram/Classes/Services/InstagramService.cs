@@ -7,7 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Navigation;
+using Wingram.Classes.Commons;
+using Wingram.Classes.ViewModels;
 using Wingram.Interfaces;
+using Wingram.Views;
 
 namespace Wingram.Classes.Services
 {
@@ -21,6 +26,7 @@ namespace Wingram.Classes.Services
             Initialize();
         }
 
+
         private async void Initialize()
         {
             using var context = new WingramContext();
@@ -30,12 +36,19 @@ namespace Wingram.Classes.Services
             {
                 instaApi.LoadStateData(account);
             }
+            else
+            {
+                //  NavigationService.GetNavigationService(Application.Current.MainWindow).Navigate(typeof( LoginPage));
+                //  var sdfasd = new LoginPage();
+                // _applicationViewModel = InstaContainer.Current.Resolve<ApplicationViewModel>();
+
+                //  _applicationViewModel.Navigate(typeof(LoginPage));
+            }
         }
         public IInstaApi InstagramApi()
         {
             return instaApi;
         }
-
         public async Task UpdateAccountAsync()
         {
             using var context = new WingramContext();

@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wingram.Classes;
+using Wingram.Classes.Commons;
+using Wingram.Classes.ViewModels;
 using Wingram.Views;
 using Wingram.Views.Controls;
 
@@ -29,15 +31,9 @@ namespace Wingram
             InitializeComponent();
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            FrameMain.Navigate(new LoginPage());
-
-            //using var context = new WingramContext();
-            //await context.Account.AddAsync(new Instagram.Classes.Account() { Username = "asd", InstagramId = 5432 });
-            //await context.SaveChangesAsync();
-
-         //   var asdasd =await context.Account.ToListAsync();
+          
         }
 
         private void FrameMain_Navigated(object sender, NavigationEventArgs e)

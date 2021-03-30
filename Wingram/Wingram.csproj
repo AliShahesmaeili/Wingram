@@ -56,7 +56,6 @@
   <ItemGroup>
     <Folder Include="Assets\Fonts\FA\" />
     <Folder Include="Classes\Commons\Behaviours\" />
-    <Folder Include="Views\Pages\" />
   </ItemGroup>
 
 </Project>

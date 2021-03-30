@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Wingram.Classes.ViewModels;
 using Wingram.Enums;
 using Wingram.Views.Controls;
+using Wingram.Views.Pages;
 
 namespace Wingram.Views
 {
@@ -39,7 +40,7 @@ namespace Wingram.Views
 
         private void TextBlockLoginHelp_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            loginViewModel.ApplicationViewModel.Navigate(typeof(LoginPage), false, new Dictionary<string, object>() { { "asdad", 1 } });
+            loginViewModel.ApplicationViewModel.Navigate(typeof(LoginHelpPage), false, new Dictionary<string, object>() { { "asdad", 1 } });
             // NavigationService.Navigate(new LoginPage());
         }
     }

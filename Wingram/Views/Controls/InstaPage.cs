@@ -42,7 +42,7 @@ namespace Wingram.Views.Controls
 
         public virtual void PageLoad(PageLoadEnum pageLoadEnum, Dictionary<string, object> parameters)
         {
-
+           
         }
     }
 }

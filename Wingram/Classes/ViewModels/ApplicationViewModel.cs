@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Wingram.Enums;
+using Wingram.Interfaces;
 using Wingram.Views.Controls;
 
 namespace Wingram.Classes.ViewModels
@@ -31,7 +32,7 @@ namespace Wingram.Classes.ViewModels
         #endregion
 
         #region Constractors
-        public ApplicationViewModel()
+        public ApplicationViewModel(IInstagramService instagramService)
         {
             pageHistories = new Dictionary<Type, InstaPage>();
         }
@@ -54,14 +55,12 @@ namespace Wingram.Classes.ViewModels
             }
             else
             {
-                FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage; ;
+                FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage;
                 pageHistories.Add(instaPageType, instaPage);
             }
 
-            if (parameters != null)
-            {
-                instaPage.PageLoad(pageLoadEnum, parameters);
-            }
+
+            instaPage.PageLoad(pageLoadEnum, parameters);
         }
         #endregion
     }
