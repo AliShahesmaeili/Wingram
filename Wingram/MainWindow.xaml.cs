@@ -33,6 +33,7 @@ namespace Wingram
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            
         }
 
         private void FrameMain_Navigated(object sender, NavigationEventArgs e)

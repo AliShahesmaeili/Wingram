@@ -12,7 +12,7 @@ namespace Wingram.Classes
     public class WingramContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-          => options.UseSqlite(@"Data Source=C:\Users\alish\OneDrive\Desktop\New folder\Wingram.db");
+          => options.UseSqlite(@"Data Source=C:\Users\alish\Desktop\New folder\Wingram.db");
 
         public DbSet<Account> Account { get; set; }
     }

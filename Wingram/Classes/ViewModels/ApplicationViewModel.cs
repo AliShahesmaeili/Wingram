@@ -41,26 +41,27 @@ namespace Wingram.Classes.ViewModels
         #region Functions
         public void Navigate(Type instaPageType, bool newPage = true, Dictionary<string, object> parameters = null)
         {
-            var pageLoadEnum = PageLoadEnum.New;
-            InstaPage instaPage = null;
-            if (newPage)
-            {
-                FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage;
-                pageHistories.Add(instaPageType, instaPage);
-            }
-            else if (pageHistories.ContainsKey(instaPageType))
-            {
-                FrameContent = instaPage = pageHistories[instaPageType];
-                pageLoadEnum = PageLoadEnum.Refresh;
-            }
-            else
-            {
-                FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage;
-                pageHistories.Add(instaPageType, instaPage);
-            }
+            FrameContent = Activator.CreateInstance(instaPageType);
+            //var pageLoadEnum = PageLoadEnum.New;
+            //InstaPage instaPage = null;
+            //if (newPage)
+            //{
+            //    FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage;
+            //    pageHistories.Add(instaPageType, instaPage);
+            //}
+            //else if (pageHistories.ContainsKey(instaPageType))
+            //{
+            //    FrameContent = instaPage = pageHistories[instaPageType];
+            //    pageLoadEnum = PageLoadEnum.Refresh;
+            //}
+            //else
+            //{
+            //    FrameContent = instaPage = Activator.CreateInstance(instaPageType) as InstaPage;
+            //    pageHistories.Add(instaPageType, instaPage);
+            //}
 
 
-            instaPage.PageLoad(pageLoadEnum, parameters);
+            //instaPage.PageLoad(pageLoadEnum, parameters);
         }
         #endregion
     }

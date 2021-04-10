@@ -1,4 +1,5 @@
-﻿using Instagram.API;
+﻿using Instagram;
+using Instagram.API;
 using Instagram.API.Builder;
 using Instagram.Classes;
 using Microsoft.EntityFrameworkCore;

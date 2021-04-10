@@ -43,7 +43,7 @@ namespace Wingram
             var instagramService = InstaContainer.Current.Resolve<IInstagramService>();
             var applicationViewModel = InstaContainer.Current.Resolve<ApplicationViewModel>();
             if (instagramService.InstagramApi().IsUserAuthenticated)
-                applicationViewModel.Navigate(typeof(LoginPage));
+                applicationViewModel.Navigate(typeof(MainPage));
             else applicationViewModel.Navigate(typeof(LoginPage));
         }
 

@@ -38,10 +38,10 @@
         <Grid>
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,1" StartPoint="0,0" SpreadMethod="Reflect" MappingMode="RelativeToBoundingBox">
-                    <GradientStop Color="#DCF2CB"/>
+                    <GradientStop Color="#DFF4CF"/>
                     <GradientStop Color="#F1F4F7" Offset="0.25"/>
                     <GradientStop Color="#EFF1F2" Offset="0.75"/>
-                    <GradientStop Color="#E4D5F9" Offset="1"/>
+                    <GradientStop Color="#FFCBCD" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
         </Grid>

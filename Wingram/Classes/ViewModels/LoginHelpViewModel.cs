@@ -23,7 +23,6 @@ namespace Wingram.Classes.ViewModels
                 ActiveNextButton = !string.IsNullOrWhiteSpace(usernameEmailPhone);
             }
         }
-
         public bool IsLoading
         {
             get => isLoading;

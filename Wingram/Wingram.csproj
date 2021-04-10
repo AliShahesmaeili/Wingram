@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <None Remove="Assets\Database\Wingram.db" />
+    <None Remove="Assets\Images\download %281%29.jpg" />
+    <None Remove="Assets\Images\download.jpg" />
+    <None Remove="Assets\Images\photo_2021-01-20_00-30-20.jpg" />
     <None Remove="Assets\Languages\values-af\plurals.xml" />
     <None Remove="Assets\Languages\values-af\raws.xml" />
     <None Remove="Assets\Languages\values-af\strings.xml" />
@@ -18,6 +21,15 @@
 
   <ItemGroup>
     <Content Include="Assets\Database\Wingram.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\download (1).jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\download.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Images\photo_2021-01-20_00-30-20.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Languages\values-af\plurals.xml">
@@ -48,14 +60,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Instagram">
-      <HintPath>C:\Users\alish\source\repos\Instagram\Instagram\bin\Debug\netcoreapp3.1\Instagram.dll</HintPath>
-    </Reference>
+    <Folder Include="Assets\Fonts\FA\" />
+    <Folder Include="Classes\Commons\Behaviours\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Fonts\FA\" />
-    <Folder Include="Classes\Commons\Behaviours\" />
+    <Reference Include="Instagram">
+      <HintPath>..\..\..\InstagramAPI\Instagram\bin\Debug\netcoreapp3.1\Instagram.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
