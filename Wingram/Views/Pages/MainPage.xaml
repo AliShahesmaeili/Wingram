@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Wingram.Views.Pages" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Wingram.Views.Pages" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:controls="clr-namespace:Wingram.Views.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
@@ -77,126 +77,100 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
 
-                    <Grid UseLayoutRounding="True" Height="90" SnapsToDevicePixels="True"  Width="240">
-                        <Grid.Effect>
-                            <DropShadowEffect Direction="270" BlurRadius="100" Color="#FFE9EBEB" ShadowDepth="10"/>
-                        </Grid.Effect>
-                        <Grid.OpacityMask>
-                            <VisualBrush Visual="{Binding ElementName=BorderBack2}"/>
-                        </Grid.OpacityMask>
-                        <Border CornerRadius="8" Opacity="0.8" x:Name="BorderBack2">
-                            <Border.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#F4F6F7"/>
-                                    <GradientStop Color="#EEEFF0" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                        </Border>
+                    <controls:ShadowControl Height="90" Width="240">
+                        <controls:ShadowControl.InnerContent>
+                            <Grid>
 
-                        <Grid>
-                        </Grid>
-                    </Grid>
-
-
-                    <Grid UseLayoutRounding="True" Grid.Row="1" Margin="0,32,0,0" SnapsToDevicePixels="True"  Width="240">
-                        <Grid.Effect>
-                            <DropShadowEffect Direction="270" BlurRadius="100" Color="#FFE9EBEB" ShadowDepth="10"/>
-                        </Grid.Effect>
-                        <Grid.OpacityMask>
-                            <VisualBrush Visual="{Binding ElementName=BorderBack3}"/>
-                        </Grid.OpacityMask>
-                        <Border CornerRadius="8" Opacity="0.8" x:Name="BorderBack3">
-                            <Border.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#F4F6F7"/>
-                                    <GradientStop Color="#EEEFF0" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                        </Border>
-
-                        <Grid>
-                            <Grid Margin="0,16">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
-
-                                <Button Margin="0,4" Height="38" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Home" Width="20" Height="20"/>
-                                        <TextBlock Text="Home" Margin="8,0,0,0"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Margin="0,4" Height="38" Grid.Row="1" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
-                                        <TextBlock Text="Peopel" Margin="8,0,0,0"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Margin="0,4" Height="38" Grid.Row="2" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
-                                        <TextBlock Text="Peopel" Margin="8,0,0,0"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Margin="0,4" Height="38" Grid.Row="3" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
-                                        <TextBlock Text="Peopel" Margin="8,0,0,0"/>
-                                    </StackPanel>
-                                </Button>
-                                <Button Margin="0,4" Height="38" Grid.Row="4" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
-                                        <TextBlock Text="Peopel" Margin="8,0,0,0"/>
-                                    </StackPanel>
-                                </Button>
                             </Grid>
-                        </Grid>
-                    </Grid>
+                        </controls:ShadowControl.InnerContent>
+                    </controls:ShadowControl>
 
+
+                    <controls:ShadowControl Grid.Row="1" Margin="0,32,0,0" Width="240">
+                        <controls:ShadowControl.InnerContent>
+                            <Grid>
+                                <Grid Margin="0,16">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Margin="0,4" Height="38" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Home" Width="20" Height="20"/>
+                                            <TextBlock Text="Home" Margin="8,0,0,0"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Margin="0,4" Height="38" Grid.Row="1" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
+                                            <TextBlock Text="Peopel" Margin="8,0,0,0"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Margin="0,4" Height="38" Grid.Row="2" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
+                                            <TextBlock Text="Peopel" Margin="8,0,0,0"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Margin="0,4" Height="38" Grid.Row="3" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
+                                            <TextBlock Text="Peopel" Margin="8,0,0,0"/>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Margin="0,4" Height="38" Grid.Row="4" HorizontalContentAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Pickaxe" Width="20" Height="20"/>
+                                            <TextBlock Text="Peopel" Margin="8,0,0,0"/>
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+
+                        </controls:ShadowControl.InnerContent>
+                    </controls:ShadowControl>
                 </Grid>
-
                 <Grid Grid.Column="1" Margin="32,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                    <StackPanel Orientation="Horizontal">
-                        <Border Width="100" Height="160" CornerRadius="8">
-                            <Border.Background>
-                                <ImageBrush ImageSource="/Assets/Images/download (1).jpg"/>
-                            </Border.Background>
-                            <StackPanel Margin="12" VerticalAlignment="Bottom">
-                                <Border HorizontalAlignment="Left" Width="38" Height="38" CornerRadius="14">
-                                    <Border.Background>
-                                        <ImageBrush ImageSource="/Assets/Images/photo_2021-01-20_00-30-20.jpg"/>
-                                    </Border.Background>
-                                </Border>
-                                <TextBlock Text="PilotProgramer" Margin="0,8,0,0" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom"/>
-                            </StackPanel>
-                        </Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="100" Height="160" CornerRadius="8">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Assets/Images/download (1).jpg"/>
+                                </Border.Background>
+                                <StackPanel Margin="12" VerticalAlignment="Bottom">
+                                    <Border HorizontalAlignment="Left" Width="38" Height="38" CornerRadius="14">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Assets/Images/photo_2021-01-20_00-30-20.jpg"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <TextBlock Text="PilotProgramer" Margin="0,8,0,0" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom"/>
+                                </StackPanel>
+                            </Border>
 
-                        <Border Width="100" Margin="16,0,0,0" Height="160" CornerRadius="8">
-                            <Border.Background>
-                                <ImageBrush ImageSource="/Assets/Images/download.jpg"/>
-                            </Border.Background>
-                            <StackPanel Margin="12" VerticalAlignment="Bottom">
-                                <Border HorizontalAlignment="Left" Width="38" Height="38" CornerRadius="14">
-                                    <Border.Background>
-                                        <ImageBrush ImageSource="/Assets/Images/photo_2021-01-20_00-30-20.jpg"/>
-                                    </Border.Background>
-                                </Border>
-                                <TextBlock Text="reza.amini" Margin="0,8,0,0" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom"/>
-                            </StackPanel>
-                        </Border>
-                    </StackPanel>
+                            <Border Width="100" Margin="16,0,0,0" Height="160" CornerRadius="8">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/Assets/Images/download.jpg"/>
+                                </Border.Background>
+                                <StackPanel Margin="12" VerticalAlignment="Bottom">
+                                    <Border HorizontalAlignment="Left" Width="38" Height="38" CornerRadius="14">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="/Assets/Images/photo_2021-01-20_00-30-20.jpg"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <TextBlock Text="reza.amini" Margin="0,8,0,0" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
-    </Grid>
 </Page>
